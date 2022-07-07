@@ -49,13 +49,13 @@ export class CreateFormComponent implements OnInit {
   }
 
   _creteForm(): void {
-    // this.form = new FormGroup({
-    //   name: new FormControl(null, [Validators.pattern(RegEx.name)]),
-    //   category: new FormControl('-----', [Validators.pattern(RegEx.name)]),
-    //   price: new FormControl(1, [Validators.min(0), Validators.max(1000000)]),
-    //   stock: new FormControl(0, [Validators.min(0), Validators.max(1000000)]),
-    //   description: new FormControl('Write your description', [Validators.pattern(RegEx.description)]),
-    // })
+    this.form = new FormGroup({
+      name: new FormControl(null, [Validators.pattern(RegEx.name)]),
+      category: new FormControl('-----', [Validators.pattern(RegEx.name)]),
+      price: new FormControl(1, [Validators.min(0), Validators.max(1000000)]),
+      stock: new FormControl(0, [Validators.min(0), Validators.max(1000000)]),
+      description: new FormControl('Write your description', [Validators.pattern(RegEx.description)]),
+    })
   }
 
 
