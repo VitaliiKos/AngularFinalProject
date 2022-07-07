@@ -1,0 +1,10 @@
+.main_block {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #726b43;
+  background-image: linear-gradient(10deg, #586958 50%, transparent 50%), linear-gradient(-60deg, #646a73 30%, transparent 30%);
+  min-height: 90vh;
+
+
+}

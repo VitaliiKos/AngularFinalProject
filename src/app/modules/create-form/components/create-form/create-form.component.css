@@ -1,0 +1,77 @@
+.block_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  height: 89vh;
+  background: #6fe013;
+}
+
+.block_form form {
+  padding: 25px 45px;
+  border: 2px solid #a19b9b;
+  border-radius: 25px;
+  font-size: 20px;
+
+  background: rgb(242, 246, 248); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 49%, rgba(181, 198, 208, 1) 49%, rgba(224, 239, 249, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 49%, rgba(181, 198, 208, 1) 49%, rgba(224, 239, 249, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(242, 246, 248, 1) 0%, rgba(181, 198, 208, 1) 49%, rgba(181, 198, 208, 1) 49%, rgba(224, 239, 249, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.block_form input, .block_form select, .block_form option {
+  margin: 5px;
+  width: 100%;
+  font-size: 20px;
+}
+
+.form_button {
+  margin-top: 5px;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.form_button button {
+  width: 50%;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.block_form {
+  position: relative;
+  padding: 4px;
+  background: #2c425d;
+  overflow: hidden;
+}
+
+.block_form:after,
+.block_form:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: right top;
+}
+
+.block_form:before {
+  top: 0;
+  background: rgb(32, 65, 88);
+  transform: skewY(-45deg);
+}
+
+.block_form:after {
+  top: -100%;
+  background: #16334A;
+  transform: skewY(-15deg);
+}
+
+form {
+  position: relative;
+  z-index: 2;
+}

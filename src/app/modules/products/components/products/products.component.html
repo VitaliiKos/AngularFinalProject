@@ -1,0 +1,11 @@
+<div>
+  <app-category class="categoriesContainer"></app-category>
+</div>
+
+<div class="add_post">
+  <a routerLink="post-new-add" routerLinkActive="active" (click)="sellProduct()">Додати оголошення</a>
+</div>
+
+<div class="productList" *ngIf="res">
+  <app-product *ngFor="let product of res" [product]="product" class="appProduct"></app-product>
+</div>

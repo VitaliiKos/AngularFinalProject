@@ -1,0 +1,11 @@
+<div class="categoryBlock">
+  <div>
+    <a routerLink="category/all" routerLinkActive="active" (click)="getByCategory('')">
+      All categories
+    </a>
+  </div>
+
+  <div *ngFor="let category of resCategories">
+    <a routerLink="category/{{category.id}}" routerLinkActive="active" (click)="getByCategory(category.id.toString())">{{category.name}}</a>
+  </div>
+</div>

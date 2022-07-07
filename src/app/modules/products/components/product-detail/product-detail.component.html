@@ -1,0 +1,25 @@
+<div class="wrap_item" *ngIf="productDetail">
+  <div class="product_image">
+    <img src="{{productDetail.image}}" alt="{{productDetail.name}}">
+  </div>
+  <div class="product_description">
+    <div><h3>Id: {{productDetail.id}}</h3></div>
+    <div><h3>Name: {{productDetail.name}}</h3></div>
+    <div><h3>Price: {{productDetail.price}}</h3></div>
+    <div><h3>Stock: {{productDetail.stock}}</h3></div>
+    <div><h3>Description: {{productDetail.description}}</h3></div>
+    <div><h3>Created: {{productDetail.created}}</h3></div>
+    <div><h3>Updated: {{productDetail.updated}}</h3></div>
+  </div>
+
+  <div class="product_button">
+    <div>
+      <button (click)="update(productDetail)">Update</button>
+      <button (click)="delete(productDetail.id)">Delete</button>
+    </div>
+    <div>
+      <button (click)="goBack()">Back</button>
+    </div>
+  </div>
+
+</div>
