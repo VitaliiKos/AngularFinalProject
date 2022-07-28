@@ -3,6 +3,8 @@ import {Component, OnInit} from '@angular/core';
 import {SelectedCategoryService, DataProductsService, ProductsService} from "../../services";
 import {ICategorySelected, IDataProduct, IProduct, IUpdateProduct} from "../../interfaces";
 import {UpdateProductService} from "../../services/update-product.service";
+import {ISession} from "../../../login/interfaces";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -11,6 +13,8 @@ import {UpdateProductService} from "../../services/update-product.service";
 })
 export class ProductsComponent implements OnInit {
 
+  sessionStatus:ISession;
+  title: string;
   res: IProduct[];
   selectedCategory: ICategorySelected;
   productRestart: IUpdateProduct
@@ -19,8 +23,13 @@ export class ProductsComponent implements OnInit {
     private productsService: ProductsService,
     private dataProductsService: DataProductsService,
     private dataCategoryService: SelectedCategoryService,
-    private updateProductService:UpdateProductService
+    private updateProductService:UpdateProductService,
+    private router:Router
+
     ) {
+    this.sessionStatus = {status: Boolean(localStorage.getItem('status'))}
+    this.title = !this.sessionStatus.status ? '/login' : 'post-new-add';
+
   }
 
   ngOnInit(): void {
@@ -36,18 +45,18 @@ export class ProductsComponent implements OnInit {
       }
     )
   }
-  sellProduct() {
-    this.updateProductService.storageUpdateProduct.next(
-      {
-        id: 0,
-        image: null,
-        name: '',
-        price: '',
-        stock: 0,
-        description: '',
-        category: ''
-      }
-    )
-
-  }
+  // sellProduct() {
+  //   this.updateProductService.storageUpdateProduct.next(
+  //     {
+  //       id: 0,
+  //       image: null,
+  //       name: '',
+  //       price: '',
+  //       stock: 0,
+  //       description: '',
+  //       category: ''
+  //     }
+  //   )
+  //
+  // }
 }

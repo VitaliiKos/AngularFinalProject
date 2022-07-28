@@ -6,6 +6,7 @@ import {RegEx} from 'src/app/constant';
 import {CategoryService, DataCategoryService, DataProductsService, ProductsService} from "../../../products/services";
 import {ICategory, IDataProduct, IUpdateProduct} from "../../../products/interfaces";
 import {UpdateProductService} from "../../../products/services/update-product.service";
+import {ISession} from "../../../login/interfaces";
 
 @Component({
   selector: 'app-create-form',

@@ -1,14 +1,15 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {HttpClientModule} from "@angular/common/http";
-
-import { ProductsRoutingModule } from './products-routing.module';
-import { ProductsComponent } from './components/products/products.component';
-import { ProductComponent } from './components/product/product.component';
-import { CategoryComponent } from './components/categories/category.component';
-import {CategoryService, ProductsService} from "./services";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+
+import {ProductsRoutingModule} from './products-routing.module';
+import {ProductsComponent} from './components/products/products.component';
+import {ProductComponent} from './components/product/product.component';
+import {CategoryComponent} from './components/categories/category.component';
+import {CategoryService, ProductsService} from "./services";
+import {ProductDetailComponent} from './components/product-detail/product-detail.component';
+import {MainInterceptor} from "../../main.interceptor";
 
 
 @NgModule({
@@ -26,7 +27,13 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
   ],
   providers: [
     ProductsService,
-    CategoryService
+    CategoryService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      multi: true,
+      useClass: MainInterceptor
+    }
   ]
 })
-export class ProductsModule { }
+export class ProductsModule {
+}

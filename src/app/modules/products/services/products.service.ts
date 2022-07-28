@@ -14,7 +14,6 @@ export class ProductsService {
   }
 
   getALl(category: string | null): Observable<IProduct[]> {
-    // console.log(category)
     return this.httpClient.get<IProduct[]>(`${urls.products}?category_id=${category}`)
   }
 

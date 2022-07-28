@@ -3,7 +3,8 @@
 </div>
 
 <div class="add_post">
-  <a routerLink="post-new-add" routerLinkActive="active" (click)="sellProduct()">Додати оголошення</a>
+<!--  <a routerLink="post-new-add" routerLinkActive="active" (click)="addProduct()">Додати оголошення</a>-->
+  <a routerLink="{{title}}" routerLinkActive="active">Додати оголошення</a>
 </div>
 
 <div class="productList" *ngIf="res">

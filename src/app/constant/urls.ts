@@ -6,4 +6,6 @@ export const urls = {
   products: `${API}/products`,
   categories: `${API}/products/category/getAll`,
   createProduct: `${API}/products/category`,
+  auth: `${API}/auth`,
+  users: `${API}/users`,
 }

@@ -1,0 +1,9 @@
+<div *ngIf="userDetail">
+  <h3>ID: {{userDetail.id}}</h3>
+  <h3>Surname: {{userDetail.profile.surname}}</h3>
+  <h3>Name: {{userDetail.profile.name}}</h3>
+  <h3>Born: {{userDetail.profile.born}}</h3>
+  <h3>Phone: {{userDetail.profile.phone}}</h3>
+  <h3>Email: {{userDetail.email}}</h3>
+  <div><button (click)="edit_profile()">Edit profile</button></div>
+</div>

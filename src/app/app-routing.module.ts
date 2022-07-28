@@ -11,9 +11,11 @@ let routes: Routes = [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'products', loadChildren: () => import('./modules').then(value => value.ProductsModule)},
       {path: 'home', loadChildren: () => import('./modules').then(value => value.HomeModule)},
-      // {path: 'profile', loadChildren: () => import('./modules').then(value => value.ProfileModule)},
-      // {path: 'login', loadChildren: () => import('./modules').then(value => value.LoginModule)},
-      // {path: 'logout', loadChildren: () => import('./modules').then(value => value.LogoutModule)},
+      {path: 'login', loadChildren: () => import('./modules').then(value => value.LoginModule)},
+      {path: 'register', loadChildren: () => import('./modules').then(value => value.RegisterModule)},
+      {path: 'profile', loadChildren: () => import('./modules').then(value => value.UserProfileModule)},
+      {path: 'logout', loadChildren: () => import('./modules').then(value => value.LogoutModule)},
+      {path: 'cart', loadChildren: () => import('./modules').then(value => value.CartModule)},
     ]
   }
 ]

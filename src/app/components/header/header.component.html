@@ -2,4 +2,7 @@
   <div><a routerLink="home" routerLinkActive="active">Home</a></div>
   <div><a routerLink="products" routerLinkActive="active">Products</a></div>
   <div><a routerLink="profile" routerLinkActive="active" >Profile</a></div>
+  <div [hidden]="sessionStatus.status"><a routerLink="register" routerLinkActive="active" >Register</a></div>
+  <div><a routerLink="{{title}}" routerLinkActive="active">{{title.charAt(0).toUpperCase() + title.slice(1)}}</a></div>
+  <div><a routerLink="cart" routerLinkActive="active" >Cart</a></div>
 </div>
